@@ -25,5 +25,5 @@ def resultado():
     medirAguaELeite()
 
 resultado()
-
+print("")
 input("Aperte qualquer tecla para fechar...")
