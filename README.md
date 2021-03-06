@@ -4,7 +4,7 @@
 # Usage
 * python3 medidor.py
 ---
-#Redes Sociais:
+# Redes Sociais:
 * Instagram criador: https://www.instagram.com/ottoni_arthur
 * Instagram Rafaella: https://www.instagram.com/rafaballerini
 
