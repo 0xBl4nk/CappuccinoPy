@@ -19,4 +19,4 @@ def resultado():
 
 resultado()
 
-input()
+input("Aperte qualquer tecla para fechar...")
