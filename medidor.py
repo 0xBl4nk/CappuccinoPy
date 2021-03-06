@@ -9,8 +9,8 @@ def medirColheres():
 def medirAguaELeite():
 
     if QUANTIDADE_COPO > 1:
-        quantAgua = (TAMANHO_COPO / 7) * QUANTIDADE_COPO
-        quantLeite = (TAMANHO_COPO - quantAgua) * QUANTIDADE_COPO
+        quantAgua = (14.285714285714 * TAMANHO_COPO / 100) * QUANTIDADE_COPO
+        quantLeite = (85.714285714286 * TAMANHO_COPO / 100) * QUANTIDADE_COPO
         print(f'{quantAgua:.2f} ml de água!')
         print(f'{quantLeite:.2f} ml de leite!')
     else:
@@ -27,3 +27,6 @@ def resultado():
 resultado()
 print("")
 input("Aperte qualquer tecla para fechar...")
+
+
+# 7 copos = 14 colheres de sopa, 1/7 de agua do copo q for, o resto de leite
