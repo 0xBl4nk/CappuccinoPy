@@ -1,4 +1,3 @@
-
 QUANTIDADE_COPO = float(input("Digite quantos copos utilizará: "))
 TAMANHO_COPO = float(input("Digite o tamanho em ml do seu copo: "))
 
