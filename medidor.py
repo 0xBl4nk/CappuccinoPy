@@ -29,4 +29,3 @@ print("")
 input("Aperte qualquer tecla para fechar...")
 
 
-# 7 copos = 14 colheres de sopa, 1/7 de agua do copo q for, o resto de leite
