@@ -7,10 +7,17 @@ def medirColheres():
     print(f'{quantidadeColher} colheres de sopa!')
 
 def medirAguaELeite():
-    quantAgua = TAMANHO_COPO / 7
-    quantLeite = TAMANHO_COPO - quantAgua
-    print(f'{quantAgua:.2f} ml de água!')
-    print(f'{quantLeite:.2f} ml de leite!')
+
+    if QUANTIDADE_COPO > 1:
+        quantAgua = (TAMANHO_COPO / 7) * QUANTIDADE_COPO
+        quantLeite = (TAMANHO_COPO - quantAgua) * QUANTIDADE_COPO
+        print(f'{quantAgua:.2f} ml de água!')
+        print(f'{quantLeite:.2f} ml de leite!')
+    else:
+        quantAgua = TAMANHO_COPO / 7
+        quantLeite = TAMANHO_COPO - quantAgua
+        print(f'{quantAgua:.2f} ml de água!')
+        print(f'{quantLeite:.2f} ml de leite!')
 
 
 def resultado():
