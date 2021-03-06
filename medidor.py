@@ -19,3 +19,5 @@ def resultado():
     medirAguaELeite()
 
 resultado()
+
+input()
