@@ -2,28 +2,25 @@ QUANTIDADE_COPO = float(input("Digite quantos copos utilizará: "))
 TAMANHO_COPO = float(input("Digite o tamanho em ml do seu copo: "))
 
 def medirColheres():
-    primeiraRegra = 14 * QUANTIDADE_COPO
-    quantidadeColher = primeiraRegra / 7
-    print(f'{quantidadeColher} colheres de sopa!')
+    return (14 * QUANTIDADE_COPO) / 7
 
-def medirAguaELeite():
+def medirAgua():
+    return (14.285714285714 * TAMANHO_COPO / 100) * QUANTIDADE_COPO if  QUANTIDADE_COPO > 1 else TAMANHO_COPO / 7
 
-    if QUANTIDADE_COPO > 1:
-        quantAgua = (14.285714285714 * TAMANHO_COPO / 100) * QUANTIDADE_COPO
-        quantLeite = (85.714285714286 * TAMANHO_COPO / 100) * QUANTIDADE_COPO
-        print(f'{quantAgua:.2f} ml de água!')
-        print(f'{quantLeite:.2f} ml de leite!')
-    else:
-        quantAgua = TAMANHO_COPO / 7
-        quantLeite = TAMANHO_COPO - quantAgua
-        print(f'{quantAgua:.2f} ml de água!')
-        print(f'{quantLeite:.2f} ml de leite!')
+def medirLeite():
+    return (85.714285714286 * TAMANHO_COPO / 100) * QUANTIDADE_COPO if QUANTIDADE_COPO > 1 else TAMANHO_COPO - medirAgua()
+
+print("\nIngredientes: \n")
+print(f"* {medirColheres()} colheres de pó de capuccino.")
+print(f"* {medirAgua():.2f} ml de água.")
+print(f"* {medirLeite():.2f} ml de leite.")
 
 
-def resultado():
-    medirColheres()
-    medirAguaELeite()
 
-resultado()
-print("")
+print("\nModo de preparo: \n")
+print(f"* Esquente {medirAgua():.2f} ml de água e adicione {medirColheres()} de pó de capuccino (NÃO DEIXA FERVER NÃO HEIM!)")
+print("* Pegue a mistura e coloque na geladeira até que esfrie.")
+print(f"* Após esfriar coloque a mistura no liquidificador junto com {medirLeite():.2f} e bata.")
+print("* Está pronto seu capuccino gelado da Rafaelvis Presley!\n")
+
 input("Aperte qualquer tecla para fechar...")
