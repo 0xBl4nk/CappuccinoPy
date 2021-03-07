@@ -1,5 +1,14 @@
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+clear_screen()
+
 QUANTIDADE_COPO = float(input("Digite quantos copos utilizará: "))
 TAMANHO_COPO = float(input("Digite o tamanho em ml do seu copo: "))
+
+clear_screen()
 
 def medirColheres():
     return (14 * QUANTIDADE_COPO) / 7
@@ -24,9 +33,9 @@ def preparo():
     print(f"* Após esfriar coloque a mistura no liquidificador junto com {medirLeite():.2f} e bata.")
     print("* Está pronto seu capuccino gelado da Rafaelvis Presley!\n")
 
-    input("Aperte qualquer tecla para fechar...")
 
 ingredientes()
 preparo()
 
 input("Aperte qualquer tecla para sair...")
+clear_screen()
