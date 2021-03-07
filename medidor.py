@@ -44,4 +44,4 @@ def main():
     print(show_steps(cup_qnt, cup_size), "\n")
 
 main()
-input('Pressione qualquer tecla para sair...')
+input('Pressione "ENTER" para sair...')
