@@ -3,6 +3,10 @@ import os
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def exit_screen():
+    os.system('pause' if os.name == 'nt' else 'echo "Aperte ENTER para fechar..."\n read')
+    clear_screen()
+
 def get_spoons(cup_qnt) -> float:
     return (14 * cup_qnt) / 7
 
@@ -44,4 +48,4 @@ def main():
     print(show_steps(cup_qnt, cup_size), "\n")
 
 main()
-input('Pressione "ENTER" para sair...')
+exit_screen()
