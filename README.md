@@ -2,6 +2,9 @@
 * Este conversor de medidas criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
 ---
 # Usage
+## windows
+* Double click
+## Linux & MacOs & Windows
 * python3 medidor.py
 ---
 # Redes Sociais:
