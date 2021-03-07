@@ -1,6 +1,8 @@
 # ConversorDeMedidas_CapuccinoGelado
 * Este conversor criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
 ---
+## Requirements
+* Python 3.7.X
 # Usage
 ### windows
 * Double click
