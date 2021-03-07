@@ -27,5 +27,3 @@ def resultado():
 resultado()
 print("")
 input("Aperte qualquer tecla para fechar...")
-
-
