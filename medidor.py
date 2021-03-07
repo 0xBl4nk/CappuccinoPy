@@ -5,8 +5,8 @@ def clear_screen():
 
 clear_screen()
 
-QUANTIDADE_COPO = float(input("Digite quantos copos utilizará: "))
-TAMANHO_COPO = float(input("Digite o tamanho em ml do seu copo: "))
+QUANTIDADE_COPO = float(input("Digite a quantidade de copos: "))
+TAMANHO_COPO = float(input("Digite o tamanho em ml dos copos: "))
 
 clear_screen()
 
@@ -30,7 +30,7 @@ def preparo():
     print("\nModo de preparo: \n")
     print(f"[+] Esquente {medirAgua():.2f} ml de água e adicione {medirColheres()} colheres de pó de capuccino (NÃO DEIXA FERVER NÃO HEIM!)")
     print("[+] Pegue a mistura e coloque na geladeira até que esfrie.")
-    print(f"[+] Após esfriar coloque a mistura no liquidificador junto com {medirLeite():.2f} e bata.")
+    print(f"[+] Após esfriar coloque a mistura no liquidificador junto com {medirLeite():.2f} ml de leite e bata.")
     print("[+] Está pronto seu capuccino gelado da Rafaelvis Presley!\n")
 
 
