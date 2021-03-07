@@ -1,5 +1,5 @@
 # ConversorDeMedidas_CapuccinoGelado
-* Este conversor de medidas criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
+* Este conversor criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
 ---
 # Usage
 ### windows
