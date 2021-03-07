@@ -28,3 +28,5 @@ def preparo():
 
 ingredientes()
 preparo()
+
+input("Aperte qualquer tecla para sair...")
