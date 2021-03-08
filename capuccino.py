@@ -46,7 +46,7 @@ def main():
     clear_screen()
     show_recipe(cup_qnt, cup_size)
     show_steps(cup_qnt, cup_size)
-    input('Pressione ENTER para continuar...')
+    input('Pressione ENTER para sair...')
 
 if __name__ == '__main__':
     main()
