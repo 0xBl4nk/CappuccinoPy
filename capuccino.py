@@ -34,8 +34,7 @@ def show_steps(cup_qnt, cup_size) -> None:
     [!] Pegue essa mistura e coloque na geladeira, até que esfrie.
     [!] Após esfriar, coloque no liquidificador e bata junto com {get_milk(cup_qnt, cup_size):.2f}ml de leite.
     [!] E pronto, seu capuccino gelado está pronto para beber! Receita by: Rafaelvis Presley!.
-    ''')
-    print(f'''
+
     OBS:
         [+] O liquidificador deixa mais cremoso
         [+] Use canudo de metal, bambu, madeira e papel. Temos que salvar as tartaruguinhas SZ.
