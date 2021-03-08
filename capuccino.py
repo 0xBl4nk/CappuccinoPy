@@ -40,7 +40,6 @@ def show_steps(cup_qnt, cup_size) -> None:
         [+] Use canudo de metal, bambu, madeira e papel. Temos que salvar as tartaruguinhas SZ.
         [!] Receita by: Rafaelvis Presley
     ''')
-
 def main():
     cup_qnt = int(input('Digite a quantidade de copos: '))
     cup_size = float(input('Digite o tamanho dos copos em ml: '))
