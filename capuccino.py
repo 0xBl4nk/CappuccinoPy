@@ -21,7 +21,7 @@ def get_milk(cup_qnt: float, cup_size: float) -> float:
 def show_recipe(cup_qnt: float, cup_size: float) -> None:
     print(f'''
     Ingredientes: \n
-    [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino.
+    [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino. (Tamanho_da_colher = "sopa")
     [+] {get_water(cup_qnt, cup_size):.2f}ml de água.
     [+] {get_milk(cup_qnt, cup_size):.2f}ml de leite.
     ''')
