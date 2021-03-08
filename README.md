@@ -7,7 +7,7 @@
 ### windows
 * Double click
 ### Linux & MacOs & Windows
-* python3 medidor.py
+* python3 capuccino.py
 ---
 # Redes Sociais:
 * Instagram criador: https://www.instagram.com/ottoni_arthur
