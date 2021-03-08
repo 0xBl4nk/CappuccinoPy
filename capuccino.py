@@ -20,7 +20,7 @@ def get_milk(cup_qnt: float, cup_size: float) -> float:
 
 def show_recipe(cup_qnt: float, cup_size: float) -> None:
     print(f'''
-    Ingredientes: \n\n
+    Ingredientes: \n
     [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino.
     [+] {get_water(cup_qnt, cup_size):.2f}ml de água.
     [+] {get_milk(cup_qnt, cup_size):.2f}ml de leite.
@@ -28,12 +28,12 @@ def show_recipe(cup_qnt: float, cup_size: float) -> None:
 
 def show_steps(cup_qnt, cup_size) -> None:
     print(f'''
-    Modo de Preparo: \n\n
+    Modo de Preparo: \n
     [!] Esquente {get_water(cup_qnt, cup_size):.2f}ml de água (sem deixar ferver!).
     [!] Adicione {get_spoons(cup_qnt):.0f} colheres (de sopa) de pó de capuccino e misture bem.
     [!] Pegue essa mistura e coloque na geladeira, até que esfrie.
-    [!] Após a mistura esfriar, coloque no liquidificador e bate junto com {get_milk(cup_qnt, cup_size):.2f}ml de leite (o liquidificador deixa mais cremoso).
-    [!] E pronto, seu capuccino gelado está pronto (use canudo de metal, bambu, madeira e papel). Receita by: Rafaelvis Presley!.
+    [!] Após esfriar, coloque no liquidificador e bata junto com {get_milk(cup_qnt, cup_size):.2f}ml de leite\n(o liquidificador deixa mais cremoso).
+    [!] E pronto, seu capuccino gelado está pronto para beber!\n(use canudo de metal, bambu, madeira e papel). Receita by: Rafaelvis Presley!.
     ''')
 
 def main():
