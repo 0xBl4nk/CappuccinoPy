@@ -38,7 +38,7 @@ def show_steps(cup_qnt, cup_size) -> None:
     OBS:
         [+] O liquidificador deixa mais cremoso
         [+] Use canudo de metal, bambu, madeira e papel. Temos que salvar as tartaruguinhas SZ.
-        [!] Receita by: Rafaelvis Presley
+        [!] Receita by: Rafaelvis Presley!
     ''')
 def main():
     cup_qnt = int(input('Digite a quantidade de copos: '))
