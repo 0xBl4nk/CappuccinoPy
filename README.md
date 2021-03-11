@@ -9,7 +9,7 @@
 ### Linux & MacOs & Windows
 * python3 capuccino.py
 ---
-# Redes Sociais:
+# Social-Network:
 * Instagram criador: https://www.instagram.com/ottoni_arthur
 * Instagram Rafaella: https://www.instagram.com/rafaballerini
 
