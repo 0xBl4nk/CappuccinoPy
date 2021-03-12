@@ -33,7 +33,7 @@ def show_steps(cup_qnt, cup_size) -> None:
     [!] Adicione {get_spoons(cup_qnt):.0f} colheres (de sopa) de pó de capuccino e misture bem.
     [!] Pegue essa mistura e coloque na geladeira, até que esfrie.
     [!] Após esfriar, coloque no liquidificador e bata junto com {get_milk(cup_qnt, cup_size):.2f}ml de leite.
-    [!] E pronto, seu capuccino gelado está pronto para beber!
+    [!] E pronto, seu capuccino gelado está pronto para beber!!
 
     OBS:
         [+] O liquidificador deixa mais cremoso
