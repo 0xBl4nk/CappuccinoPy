@@ -10,7 +10,7 @@
 * python3 capuccino.py
 ---
 # Social-Network:
-* Instagram criador: https://www.instagram.com/ottoni_arthur
+* Instagram criador: https://www.instagram.com/ottoni.arthur
 * Instagram Rafaella: https://www.instagram.com/rafaballerini
 
 * Youtube criador: https://www.youtube.com/channel/UCQxsPy4aLwGQ9fjZhsDJ70Q
