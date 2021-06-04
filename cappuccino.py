@@ -70,6 +70,7 @@ def show_steps(cup_qnt, cup_size, language) -> None:
 def main():
     clear_screen()
     language = get_language()
+    clear_screen()
     
     if language == 'e':
         cup_size = float(input('Enter cup size (ml): '))
