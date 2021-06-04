@@ -4,7 +4,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_language():
-    language = input('Choose a language: english or portuguese (type E or P):  ')
+    language = input('Choose a language: english or portuguese (type E or P):  ').lower()
     return language
 
 def get_spoons(cup_qnt: float) -> float:
@@ -23,14 +23,14 @@ def get_milk(cup_qnt: float, cup_size: float) -> float:
         return cup_size - get_water(cup_qnt, cup_size)
 
 def show_recipe(cup_qnt: float, cup_size: float, language) -> None:
-    if language == 'P':
+    if language == 'p':
         print(f'''Ingredientes para {cup_qnt} copos de {cup_size}ml: \n
     [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino. (Tamanho_da_colher = "sopa")
     [+] {get_water(cup_qnt, cup_size):.2f}ml de água.
     [+] {get_milk(cup_qnt, cup_size):.2f}ml de leite.
         ''')
 
-    elif language == 'E' or language == 'e':
+    elif language == 'e':
          print(f'''Ingredients for {cup_qnt} cups of {cup_size}ml: \n
     [+] {get_spoons(cup_qnt):.0f} soup spoons of capuccino.
     [+] {get_water(cup_qnt, cup_size):.2f}ml of water.
@@ -38,7 +38,7 @@ def show_recipe(cup_qnt: float, cup_size: float, language) -> None:
         ''')
 
 def show_steps(cup_qnt, cup_size, language) -> None:
-    if language == 'P' or language == 'p':
+    if language == 'p':
         print(f'''Modo de Preparo: \n
     [!] Esquente {get_water(cup_qnt, cup_size):.2f}ml de água (sem deixar ferver!).
     [!] Adicione {get_spoons(cup_qnt):.0f} colheres (de sopa) de pó de capuccino e misture bem.
@@ -53,7 +53,7 @@ def show_steps(cup_qnt, cup_size, language) -> None:
         [!] Script by: Arthur Ottoni!
         ''')
 
-    elif language == 'E' or language == 'e':
+    elif language == 'e':
         print(f'''How to prepare: \n
     [!] Warm up {get_water(cup_qnt, cup_size):.2f}ml of water (don't let it boil!).
     [!] Add {get_spoons(cup_qnt):.0f} soup spoons of cappucino and mix it.
@@ -71,21 +71,21 @@ def main():
     clear_screen()
     language = get_language()
     
-    if language == 'E' or language == 'e':
+    if language == 'e':
         cup_size = float(input('Enter cup size (ml): '))
         cup_qnt = int(input('Enter how many cups: '))
 
-    elif language == 'P' or language == 'e':
+    elif language == 'e':
         cup_size = float(input('Digite o tamanho do copo em ml: '))
         cup_qnt = int(input('Digite a quantidade de copos: '))
 
     show_recipe(cup_qnt, cup_size, language)
     show_steps(cup_qnt, cup_size, language)
 
-    if language == 'P' or language == 'p':
+    if language == 'p':
         input('Pressione ENTER para sair...')
 
-    elif language == 'E' or language == 'e':
+    elif language == 'e':
         input('Press ENTER to quit')
 
 if __name__ == '__main__':
