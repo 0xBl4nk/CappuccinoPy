@@ -75,7 +75,7 @@ def main():
         cup_size = float(input('Enter cup size (ml): '))
         cup_qnt = int(input('Enter how many cups: '))
 
-    elif language == 'e':
+    elif language == 'p':
         cup_size = float(input('Digite o tamanho do copo em ml: '))
         cup_qnt = int(input('Digite a quantidade de copos: '))
 
