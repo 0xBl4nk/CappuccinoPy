@@ -44,7 +44,7 @@
 </div>
 <br>
 
-### Cntribuidores
+# Contribuidores
 
 **Lorenzo Battistela:**
 
