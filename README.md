@@ -1,16 +1,19 @@
 # About CappuccinoJs
-* This converter will create the exact measure for your cappuccino recipe from the grandiose Rafaella Ballerini!
 
-* Este conversor criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
+- This converter will create the exact measure for your cappuccino recipe from the grandiose Rafaella Ballerini!
+
+- Este conversor criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
 
 # How to use this tool
-* python cappuccino.py OR double-click > cappuccino.py (windows)
+
+- python cappuccino.py OR double-click > cappuccino.py (windows)
 
 ## Requirements
 
-* Python 3.7X
+- Python 3.7X
 
 ## Output example:
+
 <img src="https://i.imgur.com/SndleSQ.png">
 
 ###### ASCII-rec: <a href="https://asciinema.org/a/407734">Click Here</a>
@@ -18,7 +21,9 @@
 ---
 
 # Social-Network:
+
 **Criador:**
+
 <div style="display: inline_block">
     <a href = "mailto: contato.ArthurOttoni@protonmail.com"><img src="https://img.shields.io/badge/-Email-%238a90c7?style=for-the-badge&logo=protonmail&logoColor=white" target="_blank"></a>
   	<a href="https://www.youtube.com/channel/UCQxsPy4aLwGQ9fjZhsDJ70Q" target="_blank"><img src="https://img.shields.io/badge/-Youtube-%23EA4335?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
@@ -30,9 +35,18 @@
 <br>
 
 **Rafaella Ballerini:**
+
  <div>
   <a href = "mailto: contatorafaballerini@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/rafaella-ballerini-45875016a" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
   <a href="https://www.youtube.com/channel/UC_-uuuZbY0AAt9CViNzvc-Q" target="_blank"><img src="https://img.shields.io/badge/-Youtube-%23333?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a>
   <a href="https://instagram.com/rafaballerini" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+</div>
+
+**Contribuinte (Lorenzo Battistela):**
+
+ <div>
+  <a href = "mailto: lorenzowbdev@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/lorenzo-battistela/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+  <a href="https://www.instagram.com/lorenzowb_dev/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
 </div>
