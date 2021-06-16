@@ -22,8 +22,20 @@ def get_milk(cup_qnt: float, cup_size: float) -> float:
     else:
         return cup_size - get_water(cup_qnt, cup_size)
 
-def show_recipe(cup_qnt: float, cup_size: float, language) -> None:
+def get_user_name(language=''):
     if language == 'p':
+        name = str(input('Digite seu nome: '))
+        return name
+    name = str(input('Type your name: '))
+    return name
+
+
+
+def show_recipe(cup_qnt: float, cup_size: float, language, name) -> None:
+    if language == 'p':
+        print('-' * 50)
+        print(f'Delicioso capuccino do(a): {name}') # do(a) ??? 
+        print('-' * 50)
         print(f'''Ingredientes para {cup_qnt} copos de {cup_size}ml: \n
     [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino. (Tamanho_da_colher = "sopa")
     [+] {get_water(cup_qnt, cup_size):.2f}ml de água.
@@ -31,7 +43,10 @@ def show_recipe(cup_qnt: float, cup_size: float, language) -> None:
         ''')
 
     elif language == 'e':
-         print(f'''Ingredients for {cup_qnt} cups of {cup_size}ml: \n
+        print('-' * 20)
+        print(f'Delicious cappuccino from {name}')
+        print('-' * 20)
+        print(f'''Ingredients for {cup_qnt} cups of {cup_size}ml: \n
     [+] {get_spoons(cup_qnt):.0f} soup spoons of capuccino.
     [+] {get_water(cup_qnt, cup_size):.2f}ml of water.
     [+] {get_milk(cup_qnt, cup_size):.2f}ml of milk.
@@ -70,6 +85,7 @@ def show_steps(cup_qnt, cup_size, language) -> None:
 def main():
     clear_screen()
     language = get_language()
+    name = get_user_name(language) # guarda o nome do usuário
     clear_screen()
     
     if language == 'e':
@@ -80,7 +96,7 @@ def main():
         cup_size = float(input('Digite o tamanho do copo em ml: '))
         cup_qnt = int(input('Digite a quantidade de copos: '))
 
-    show_recipe(cup_qnt, cup_size, language)
+    show_recipe(cup_qnt, cup_size, language,name)
     show_steps(cup_qnt, cup_size, language)
 
     if language == 'p':
