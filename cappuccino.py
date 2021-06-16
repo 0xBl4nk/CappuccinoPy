@@ -34,7 +34,7 @@ def get_user_name(language=''):
 def show_recipe(cup_qnt: float, cup_size: float, language, name) -> None:
     if language == 'p':
         print('-' * 50)
-        print(f'Delicioso capuccino do(a): {name}') # do(a) ??? 
+        print(f'Delicioso capuccino do(a): {name}') # do(a) ????
         print('-' * 50)
         print(f'''Ingredientes para {cup_qnt} copos de {cup_size}ml: \n
     [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino. (Tamanho_da_colher = "sopa")
