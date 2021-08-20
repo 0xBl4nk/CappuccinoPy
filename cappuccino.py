@@ -1,11 +1,34 @@
 import os
 
+from configparser import ConfigParser, SectionProxy
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def get_language():
-    language = input('Choose a language: english or portuguese (type E or P):  ').lower()
-    return language
+def get_languages() -> dict:
+    languages = {}
+    config = ConfigParser()
+    for f in os.listdir("./langs/"):
+        if "ini" in f:
+            config.read("./langs/" + f)
+            languages[f.split(".")[0]] = config["translation"]["language_name"]
+    return languages
+
+def get_language(languages: dict) -> SectionProxy:
+    config = ConfigParser()
+    print("Available languages: ")
+    for k, v in languages.items():
+        print(f" [-] {k} -> {v}")
+    while True:
+        language = input('Choose a language: ').lower()
+        if language in languages:
+            config.read(f"./langs/{language}.ini")
+            return config["translation"]
+        else:
+            print("Invalid language key! Try again...")
+
+def get_message(message: str, language: SectionProxy) -> str:
+    return language[message].replace("{n}", "\n")
 
 def get_spoons(cup_qnt: float) -> float:
     return (14 * cup_qnt) / 7
@@ -22,72 +45,40 @@ def get_milk(cup_qnt: float, cup_size: float) -> float:
     else:
         return cup_size - get_water(cup_qnt, cup_size)
 
-def show_recipe(cup_qnt: float, cup_size: float, language) -> None:
-    if language == 'p':
-        print(f'''Ingredientes para {cup_qnt} copos de {cup_size}ml: \n
-    [+] {get_spoons(cup_qnt):.0f} colheres de pó de capuccino. (Tamanho_da_colher = "sopa")
-    [+] {get_water(cup_qnt, cup_size):.2f}ml de água.
-    [+] {get_milk(cup_qnt, cup_size):.2f}ml de leite.
-        ''')
-
-    elif language == 'e':
-         print(f'''Ingredients for {cup_qnt} cups of {cup_size}ml: \n
-    [+] {get_spoons(cup_qnt):.0f} soup spoons of capuccino.
-    [+] {get_water(cup_qnt, cup_size):.2f}ml of water.
-    [+] {get_milk(cup_qnt, cup_size):.2f}ml of milk.
-        ''')
+def show_recipe(cup_qnt: float, cup_size: float, language: SectionProxy) -> None:
+    text = get_message("ingredients", language)\
+        .replace("{cup_qnt}", str(cup_qnt))\
+        .replace("{cup_size}", str(cup_size))\
+        .replace("{soup_spoons}", f"{get_spoons(cup_qnt):.0f}")\
+        .replace("{water}", f"{get_water(cup_qnt, cup_size):.2f}")\
+        .replace("{milk}", f"{get_milk(cup_qnt, cup_size):.2f}")
+    print(text)
 
 def show_steps(cup_qnt, cup_size, language) -> None:
-    if language == 'p':
-        print(f'''Modo de Preparo: \n
-    [!] Esquente {get_water(cup_qnt, cup_size):.2f}ml de água (sem deixar ferver!).
-    [!] Adicione {get_spoons(cup_qnt):.0f} colheres (de sopa) de pó de capuccino e misture bem.
-    [!] Pegue essa mistura e coloque na geladeira, até que esfrie.
-    [!] Após esfriar, coloque no liquidificador e bata junto com {get_milk(cup_qnt, cup_size):.2f}ml de leite.
-    [!] E pronto, seu capuccino gelado está pronto para beber!!
+    text = get_message("how_to_prepare", language) \
+        .replace("{soup_spoons}", f"{get_spoons(cup_qnt):.0f}") \
+        .replace("{water}", f"{get_water(cup_qnt, cup_size):.2f}") \
+        .replace("{milk}", f"{get_milk(cup_qnt, cup_size):.2f}")
+    print(text)
+    print(get_message("observation", language))
 
-    OBS:
-        [+] O liquidificador deixa mais cremoso
-        [+] Use canudo de metal, bambu, madeira e papel. Temos que salvar as tartaruguinhas SZ.
-        [!] Receita by: Rafa Ballerini!
-        [!] Script by: Arthur Ottoni!
-        ''')
-
-    elif language == 'e':
-        print(f'''How to prepare: \n
-    [!] Warm up {get_water(cup_qnt, cup_size):.2f}ml of water (don't let it boil!).
-    [!] Add {get_spoons(cup_qnt):.0f} soup spoons of cappucino and mix it.
-    [!] Take that mix and put it in the fridge untill it gets cold.
-    [!] After it got cold, put it in the blender and blend it with {get_milk(cup_qnt, cup_size):.2f}ml of milk.
-    [!] All set, your iced capuccino is ready to drink!!
-
-    Observations:
-        [+] The blender leaves it creamier.
-        [+] Use metal, wood or paper straws. We have to save the turtles SZ.
-        [!] Recipe by: Rafa Ballerini!
-        [!] Script by: Arthur Ottoni!
-        ''')
 def main():
     clear_screen()
-    language = get_language()
-    clear_screen()
-    
-    if language == 'e':
-        cup_size = float(input('Enter cup size (ml): '))
-        cup_qnt = int(input('Enter how many cups: '))
 
-    elif language == 'p':
-        cup_size = float(input('Digite o tamanho do copo em ml: '))
-        cup_qnt = int(input('Digite a quantidade de copos: '))
+    languages = get_languages()
+    language = get_language(languages)
+
+    clear_screen()
+
+    cup_size = float(input(get_message("enter_cup_size", language) + " "))
+    cup_qnt = int(input(get_message("enter_cups", language) + " "))
+
+    clear_screen()
 
     show_recipe(cup_qnt, cup_size, language)
     show_steps(cup_qnt, cup_size, language)
 
-    if language == 'p':
-        input('Pressione ENTER para sair...')
-
-    elif language == 'e':
-        input('Press ENTER to quit')
+    input(get_message("exit", language))
 
 if __name__ == '__main__':
     main()
