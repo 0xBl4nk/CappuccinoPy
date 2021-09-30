@@ -1,4 +1,4 @@
-# About CappuccinoJs
+# About CappuccinoPy
 
 - This converter will create the exact measure for your cappuccino recipe from the grandiose Rafaella Ballerini!
 
