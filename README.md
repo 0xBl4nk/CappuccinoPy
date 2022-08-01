@@ -1,8 +1,8 @@
 # About CappuccinoPy
 
-- This converter will create the exact measure for your cappuccino recipe from the grandiose Rafaella Ballerini!
+- This converter will create the exact measure for your cappuccino recipe from Rafaella Ballerini!
 
-- Este conversor criará a medida exata para sua receita de capuccino gelado da grandiosa Rafaella Ballerini!
+- Este conversor criará a medida exata para sua receita de capuccino gelado da Rafaella Ballerini!
 
 # How to use this tool
 
